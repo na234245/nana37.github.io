@@ -1,0 +1,771 @@
+/* =========================
+   NEO ARCHIVE
+   Minimal Photo Portfolio
+========================= */
+
+
+/* 基础 */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+
+    background:#F4F1EA;
+
+    color:#1E2B22;
+
+    font-family:
+    "Helvetica Neue",
+    "PingFang SC",
+    "Microsoft YaHei",
+    Arial,
+    sans-serif;
+
+    line-height:1.8;
+
+}
+
+
+
+/* 图片 */
+
+img{
+
+    max-width:100%;
+    height:auto;
+    display:block;
+
+}
+
+
+
+/* 链接 */
+
+a{
+
+    color:inherit;
+    text-decoration:none;
+
+}
+
+
+
+/* =========================
+ HEADER
+========================= */
+
+
+.site-header{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:
+
+    40px 80px;
+
+
+    z-index:10;
+
+}
+
+
+
+.logo a{
+
+    font-size:22px;
+
+    letter-spacing:5px;
+
+    font-weight:500;
+
+}
+
+
+
+nav{
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+
+
+nav a{
+
+    font-size:13px;
+
+    letter-spacing:3px;
+
+    color:#555;
+
+    transition:.3s;
+
+}
+
+
+
+nav a:hover{
+
+    color:#1E2B22;
+
+}
+
+
+
+/* 语言按钮 */
+
+
+.language{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+
+
+.language button{
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    color:#555;
+
+}
+
+
+.language button:hover{
+
+    color:#1E2B22;
+
+}
+
+
+
+/* =========================
+ HOME
+========================= */
+
+
+.home{
+
+    min-height:90vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+
+.cover{
+
+    position:relative;
+
+    text-align:center;
+
+}
+
+
+
+
+
+
+
+/* 主标题 */
+
+
+.logo-big{
+
+    font-size:
+    clamp(90px,14vw,180px);
+
+    line-height:0.82;
+
+    letter-spacing:-8px;
+
+    font-weight:600;
+
+    color:#1E2B22;
+
+    animation:titleShow 1.2s ease;
+
+}
+
+
+
+.creator-role{
+
+    margin-top:60px;
+
+    font-size:14px;
+
+    letter-spacing:8px;
+
+    color:#666;
+
+    text-transform:uppercase;
+
+}
+
+
+
+/* 搜索 */
+
+
+.search-box{
+
+    margin-top:70px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+}
+
+
+
+.search-box input{
+
+
+    width:280px;
+
+
+    padding:14px;
+
+
+    background:white;
+
+
+    border:
+
+    1px solid #aaa;
+
+
+    font-size:14px;
+
+
+}
+
+
+
+.search-box button{
+
+
+    padding:14px 25px;
+
+
+    border:none;
+
+
+    background:#1E2B22;
+
+
+    color:white;
+
+
+    cursor:pointer;
+
+}
+
+
+
+/* 进入按钮 */
+
+
+.enter{
+
+    display:inline-block;
+
+    margin-top:45px;
+
+    padding:18px 60px;
+
+    border:1px solid #1E2B22;
+
+    letter-spacing:5px;
+
+    font-size:12px;
+
+    transition:.5s;
+
+}
+
+
+.enter:hover{
+
+    background:#1E2B22;
+
+    color:#F4F1EA;
+
+}
+
+
+
+.enter:hover{
+
+
+    background:#1E2B22;
+
+    color:white;
+
+}
+
+
+
+.info{
+
+    margin-top:80px;
+
+    font-size:12px;
+
+    letter-spacing:4px;
+
+    color:#777;
+
+}
+
+
+
+
+
+/* =========================
+ INDEX
+========================= */
+
+
+.archive-index{
+
+
+    padding:
+
+    120px 10%;
+
+
+}
+
+
+
+.archive-index h2{
+
+
+    font-size:50px;
+
+    font-weight:300;
+
+    letter-spacing:10px;
+
+
+}
+
+
+
+
+.archive-menu{
+
+
+    margin-top:60px;
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+
+}
+
+
+
+.archive-menu a{
+
+
+    width:320px;
+
+
+    padding:20px;
+
+
+    border-bottom:
+
+    1px solid #aaa;
+
+
+    font-size:20px;
+
+
+    letter-spacing:4px;
+
+
+    transition:.4s;
+
+
+}
+
+
+
+.archive-menu a:hover{
+
+
+    transform:translateX(20px);
+
+
+}
+
+
+
+
+
+/* =========================
+ PHOTO PAGE
+========================= */
+
+
+.photo-page,
+.film-page,
+.sound-page,
+.writing-page,
+.about-page{
+
+
+    padding:
+
+    120px 10%;
+
+
+}
+
+
+
+.photo-page h1,
+.film-page h1,
+.sound-page h1,
+.writing-page h1,
+.about-page h1{
+
+
+    font-size:
+
+    clamp(50px,8vw,100px);
+
+
+    font-weight:300;
+
+
+    letter-spacing:8px;
+
+
+}
+
+
+
+
+.description,
+.sound-intro,
+.writing-intro{
+
+
+    max-width:650px;
+
+
+    margin:80px 0;
+
+
+    font-size:18px;
+
+
+}
+
+
+
+/* 摄影图片 */
+
+
+.photo-book{
+
+
+    display:flex;
+
+    flex-direction:column;
+
+
+    gap:120px;
+
+
+}
+
+
+
+.photo-book img{
+
+
+    width:85%;
+
+
+    margin:auto;
+
+
+    transition:.8s;
+
+
+}
+
+
+
+.photo-book img:hover{
+
+
+    transform:scale(1.03);
+
+
+}
+
+
+
+
+
+/* =========================
+ CARD
+========================= */
+
+
+.music-card,
+.note-paper,
+.film-info,
+.camera-info{
+
+
+    max-width:650px;
+
+
+    background:white;
+
+
+    padding:50px;
+
+
+    margin-bottom:50px;
+
+
+    border:
+
+    1px solid #ddd;
+
+
+}
+
+
+
+
+/* =========================
+ FOOTER
+========================= */
+
+
+footer{
+
+
+    padding:60px;
+
+
+    text-align:center;
+
+
+    color:#777;
+
+
+    font-size:13px;
+
+
+}
+
+
+
+
+
+/* 动画 */
+
+
+@keyframes titleShow{
+
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+}
+
+
+
+
+
+/* =========================
+ MOBILE
+========================= */
+
+
+@media(max-width:768px){
+
+
+.site-header{
+
+
+    padding:25px;
+
+
+    flex-direction:column;
+
+    gap:25px;
+
+
+}
+
+
+
+nav{
+
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+
+}
+
+
+
+.logo-big{
+
+
+    font-size:70px;
+
+
+}
+
+
+
+.archive-label{
+
+
+    display:none;
+
+
+}
+
+
+
+.creator-role{
+
+
+    font-size:14px;
+
+
+}
+
+
+
+.photo-page,
+.film-page,
+.sound-page,
+.writing-page,
+.about-page{
+
+
+    padding:
+
+    80px 25px;
+
+
+}
+
+
+
+.photo-book img{
+
+
+    width:100%;
+
+
+}
+
+
+.archive-menu a{
+
+
+    width:100%;
+
+
+}
+
+
+
+}.cover{
+
+    animation:fadeIn 1.5s ease;
+
+}
+
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}

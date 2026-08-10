@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-CN">
+
+
+<head>
+
+
+<meta charset="UTF-8">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<meta name="description" content="NEO ARCHIVE is a photography portfolio focusing on urban observation, documentary photography and visual storytelling.">
+
+
+<title>PHOTO - NEO ARCHIVE</title>
+
+
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+
+
+
+
+<body>
+
+
+
+
+
+<header class="site-header">
+
+
+
+<div class="logo">
+
+
+<a href="index.html">
+
+NEO ARCHIVE
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+
+<nav>
+
+
+<a href="index.html">HOME</a>
+
+<a href="photo.html">PHOTO</a>
+
+<a href="film.html">FILM</a>
+
+<a href="sound.html">SOUND</a>
+
+<a href="writing.html">WRITING</a>
+
+<a href="about.html">ABOUT</a>
+
+
+
+
+<button onclick="changeLanguage('zh')">
+
+中文
+
+</button>
+
+
+
+<button onclick="changeLanguage('en')">
+
+EN
+
+</button>
+
+
+
+</nav>
+
+
+
+
+</header>
+
+
+
+
+
+
+
+
+<section class="photo-page">
+
+
+
+
+
+<p class="project-number">
+
+
+PROJECT NO.001
+
+
+</p>
+
+
+
+
+
+<h1 data-lang="photoTitle">
+
+
+CITY MEMORY
+
+
+</h1>
+
+
+
+
+
+
+
+<div class="project-info">
+
+
+
+<div>
+
+DATE
+
+<br>
+
+2026
+
+</div>
+
+
+
+
+<div>
+
+LOCATION
+
+<br>
+
+CHINA
+
+</div>
+
+
+
+
+
+<div>
+
+CAMERA
+
+<br>
+
+SONY A7
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="description">
+
+
+
+<p data-lang="photoText">
+
+
+城市像一本不断翻页的书。
+
+</p>
+
+
+
+
+<p>
+
+
+我记录街道、建筑以及人与空间之间短暂的关系。
+
+
+</p>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="photo-book">
+
+
+
+<img src="images/city.jpg"
+
+alt="city photography"
+
+class="gallery-img">
+
+
+
+
+
+<img src="images/people.jpg"
+
+alt="people photography"
+
+class="gallery-img">
+
+
+
+
+
+<img src="images/travel.jpg"
+
+alt="travel photography"
+
+class="gallery-img">
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="lightbox">
+
+
+
+<img src="" alt="preview">
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="camera-info">
+
+
+<h3>
+
+PROJECT INFO
+
+</h3>
+
+
+
+
+<p>
+
+Camera:
+
+<br>
+
+Sony A7 Series
+
+</p>
+
+
+
+
+
+<p>
+
+Lens:
+
+<br>
+
+35mm
+
+</p>
+
+
+
+
+
+<p>
+
+Style:
+
+<br>
+
+Documentary Photography
+
+</p>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="archive-note">
+
+
+ARCHIVE NOTE
+
+
+<br><br>
+
+
+城市像一本不断翻页的书。
+
+
+<br>
+
+
+我记录街道、建筑以及人与空间之间短暂的关系。
+
+
+</div>
+
+
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+<footer>
+
+
+© 2026 NEO ARCHIVE
+
+
+</footer>
+
+
+
+
+
+
+
+
+
+<script src="language.js"></script>
+
+
+
+
+
+<script>
+
+
+const images =
+document.querySelectorAll(".gallery-img");
+
+
+const lightbox =
+document.querySelector(".lightbox");
+
+
+const lightboxImg =
+document.querySelector(".lightbox img");
+
+
+
+images.forEach(img=>{
+
+
+img.onclick=function(){
+
+
+lightboxImg.src=this.src;
+
+
+lightbox.classList.add("active");
+
+
+}
+
+
+});
+
+
+
+lightbox.onclick=function(){
+
+
+lightbox.classList.remove("active");
+
+
+}
+
+
+
+</script>
+
+
+
+
+
+
+</body>
+
+
+</html>
