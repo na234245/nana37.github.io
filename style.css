@@ -1,0 +1,2006 @@
+/* =========================
+   NEO ARCHIVE
+   Minimal Photo Portfolio
+========================= */
+
+
+/* 基础 */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+
+    background:#F4F1EA;
+
+    color:#1E2B22;
+
+    font-family:
+    "Helvetica Neue",
+    "PingFang SC",
+    "Microsoft YaHei",
+    Arial,
+    sans-serif;
+
+    line-height:1.8;
+
+}
+
+
+
+/* 图片 */
+
+img{
+
+    max-width:100%;
+    height:auto;
+    display:block;
+
+}
+
+
+
+/* 链接 */
+
+a{
+
+    color:inherit;
+    text-decoration:none;
+
+}
+
+
+
+/* =========================
+ HEADER
+========================= */
+
+
+.site-header{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:
+
+    40px 80px;
+
+
+    z-index:10;
+
+}
+
+
+
+.logo a{
+
+    font-size:22px;
+
+    letter-spacing:5px;
+
+    font-weight:500;
+
+}
+
+
+
+nav{
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+
+
+nav a{
+
+    font-size:13px;
+
+    letter-spacing:3px;
+
+    color:#555;
+
+    transition:.3s;
+
+}
+
+
+
+nav a:hover{
+
+    color:#1E2B22;
+
+}
+
+
+
+/* 语言按钮 */
+
+
+.language{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+
+
+.language button{
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    color:#555;
+
+}
+
+
+.language button:hover{
+
+    color:#1E2B22;
+
+}
+
+
+
+/* =========================
+ HOME
+========================= */
+
+
+.home{
+
+    min-height:90vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+
+.cover{
+
+    position:relative;
+
+    text-align:center;
+
+}
+
+
+
+
+
+
+
+/* 主标题 */
+
+
+.logo-big{
+
+    font-size:
+    clamp(90px,14vw,180px);
+
+    line-height:0.82;
+
+    letter-spacing:-8px;
+
+    font-weight:600;
+
+    color:#1E2B22;
+
+    animation:titleShow 1.2s ease;
+
+}
+
+
+
+.creator-role{
+
+    margin-top:60px;
+
+    font-size:14px;
+
+    letter-spacing:8px;
+
+    color:#666;
+
+    text-transform:uppercase;
+
+}
+
+
+
+/* 搜索 */
+
+
+.search-box{
+
+    margin-top:70px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+}
+
+
+
+.search-box input{
+
+
+    width:280px;
+
+
+    padding:14px;
+
+
+    background:white;
+
+
+    border:
+
+    1px solid #aaa;
+
+
+    font-size:14px;
+
+
+}
+
+
+
+.search-box button{
+
+
+    padding:14px 25px;
+
+
+    border:none;
+
+
+    background:#1E2B22;
+
+
+    color:white;
+
+
+    cursor:pointer;
+
+}
+
+
+
+/* 进入按钮 */
+
+
+.enter{
+
+    display:inline-block;
+
+    margin-top:45px;
+
+    padding:18px 60px;
+
+    border:1px solid #1E2B22;
+
+    letter-spacing:5px;
+
+    font-size:12px;
+
+    transition:.5s;
+
+}
+
+
+.enter:hover{
+
+    background:#1E2B22;
+
+    color:#F4F1EA;
+
+}
+
+
+
+.enter:hover{
+
+
+    background:#1E2B22;
+
+    color:white;
+
+}
+
+
+
+.info{
+
+    margin-top:80px;
+
+    font-size:12px;
+
+    letter-spacing:4px;
+
+    color:#777;
+
+}.lightbox{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.8);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:999;
+
+}
+
+
+
+.lightbox img{
+
+    max-width:90%;
+
+    max-height:90%;
+
+}
+
+
+
+.lightbox.active{
+
+    display:flex;
+
+}
+
+
+
+
+
+/* =========================
+ INDEX
+========================= */
+
+
+.archive-index{
+
+
+    padding:
+
+    120px 10%;
+
+
+}
+
+
+
+.archive-index h2{
+
+
+    font-size:50px;
+
+    font-weight:300;
+
+    letter-spacing:10px;
+
+
+}
+
+
+
+
+.archive-menu{
+
+
+    margin-top:60px;
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+
+}
+
+
+
+.archive-menu a{
+
+
+    width:320px;
+
+
+    padding:20px;
+
+
+    border-bottom:
+
+    1px solid #aaa;
+
+
+    font-size:20px;
+
+
+    letter-spacing:4px;
+
+
+    transition:.4s;
+
+
+}
+
+
+
+.archive-menu a:hover{
+
+
+    transform:translateX(20px);
+
+
+}
+
+
+
+
+
+/* =========================
+ PHOTO PAGE
+========================= */
+
+
+.photo-page,
+.film-page,
+.sound-page,
+.writing-page,
+.about-page{
+
+
+    padding:
+
+    120px 10%;
+
+
+}
+
+
+
+.photo-page h1,
+.film-page h1,
+.sound-page h1,
+.writing-page h1,
+.about-page h1{
+
+
+    font-size:
+
+    clamp(50px,8vw,100px);
+
+
+    font-weight:300;
+
+
+    letter-spacing:8px;
+
+
+}
+
+
+
+
+.description,
+.sound-intro,
+.writing-intro{
+
+
+    max-width:650px;
+
+
+    margin:80px 0;
+
+
+    font-size:18px;
+
+
+}
+
+
+
+/* 摄影图片 */
+
+
+.photo-book{
+
+
+    display:flex;
+
+    flex-direction:column;
+
+
+    gap:120px;
+
+
+}
+
+
+
+.photo-book img{
+
+
+    width:85%;
+
+
+    margin:auto;
+
+
+    transition:.8s;
+
+
+}
+
+
+
+.photo-book img:hover{
+
+
+    transform:scale(1.03);
+
+
+}
+
+
+
+
+
+/* =========================
+ CARD
+========================= */
+
+
+.music-card,
+.note-paper,
+.film-info,
+.camera-info{
+
+
+    max-width:650px;
+
+
+    background:white;
+
+
+    padding:50px;
+
+
+    margin-bottom:50px;
+
+
+    border:
+
+    1px solid #ddd;
+
+
+}
+
+
+
+
+/* =========================
+ FOOTER
+========================= */
+
+
+footer{
+
+
+    padding:60px;
+
+
+    text-align:center;
+
+
+    color:#777;
+
+
+    font-size:13px;
+
+
+}
+
+
+
+
+
+/* 动画 */
+
+
+@keyframes titleShow{
+
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+}
+
+
+
+
+
+/* =========================
+ MOBILE
+========================= */
+
+
+@media(max-width:768px){
+
+
+.site-header{
+
+
+    padding:25px;
+
+
+    flex-direction:column;
+
+    gap:25px;
+
+
+}
+
+
+
+nav{
+
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+
+}
+
+
+
+.logo-big{
+
+
+    font-size:70px;
+
+
+}
+
+
+
+.archive-label{
+
+
+    display:none;
+
+
+}
+
+
+
+.creator-role{
+
+
+    font-size:14px;
+
+
+}
+
+
+
+.photo-page,
+.film-page,
+.sound-page,
+.writing-page,
+.about-page{
+
+
+    padding:
+
+    80px 25px;
+
+
+}
+
+
+
+.photo-book img{
+
+
+    width:100%;
+
+
+}
+
+
+.archive-menu a{
+
+
+    width:100%;
+
+
+}
+
+
+
+}.cover{
+
+    animation:fadeIn 1.5s ease;
+
+}
+
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}.contact-section{
+
+    margin-top:120px;
+
+    padding-top:50px;
+
+    border-top:1px solid #ddd;
+
+}
+
+
+
+.contact-section h2{
+
+    font-size:18px;
+
+    letter-spacing:5px;
+
+    margin-bottom:50px;
+
+}
+
+
+
+.contact-grid{
+
+    display:flex !important;
+
+    flex-direction:column !important;
+
+    gap:40px !important;
+
+}
+
+
+
+.contact-grid .label{
+
+    font-size:11px;
+
+    letter-spacing:4px;
+
+    color:#888;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.contact-grid a{
+
+    color:#1E2B22;
+
+    letter-spacing:2px;
+
+}
+
+
+
+.contact-grid a:hover{
+
+    opacity:.6;
+
+}@media(max-width:768px){
+
+
+.contact-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+
+}.contact-section{
+
+    margin-top:120px;
+
+    padding-top:60px;
+
+    border-top:1px solid #ddd;
+
+}
+
+
+
+.contact-section h2{
+
+    font-size:18px;
+
+    letter-spacing:6px;
+
+    margin-bottom:50px;
+
+}
+
+
+
+.contact-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:60px;
+
+}
+
+
+
+.contact-grid .label{
+
+    font-size:11px;
+
+    letter-spacing:4px;
+
+    color:#888;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.contact-grid a{
+
+    color:#1E2B22;
+
+    text-decoration:none;
+
+    letter-spacing:2px;
+
+}
+
+
+
+.contact-grid a:hover{
+
+    opacity:.6;
+
+}
+
+
+
+
+@media(max-width:768px){
+
+.contact-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}.about-page{
+
+max-width:900px;
+
+margin:120px auto;
+
+padding:0 40px;
+
+}
+
+
+.about-page h1{
+
+font-size:60px;
+
+letter-spacing:8px;
+
+margin:40px 0;
+
+}
+
+
+
+.role{
+
+letter-spacing:5px;
+
+color:#777;
+
+line-height:2;
+
+}
+
+
+
+.about-text,
+.profile-box,
+.contact-section{
+
+margin-top:100px;
+
+}
+
+
+
+.about-text h2,
+.profile-box h2,
+.contact-section h2{
+
+font-size:16px;
+
+letter-spacing:5px;
+
+margin-bottom:40px;
+
+}
+
+
+
+.about-text p{
+
+line-height:2;
+
+letter-spacing:2px;
+
+}
+
+
+
+.profile-box p{
+
+margin-bottom:35px;
+
+letter-spacing:3px;
+
+}
+
+
+
+.contact-section{
+
+border-top:1px solid #ddd;
+
+padding-top:60px;
+
+}
+
+
+
+.contact-grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:50px;
+
+}
+
+
+
+.label{
+
+font-size:11px;
+
+letter-spacing:4px;
+
+color:#888;
+
+}
+
+
+
+.contact-grid a{
+
+color:#1E2B22;
+
+text-decoration:none;
+
+}
+
+
+
+@media(max-width:768px){
+
+
+.about-page{
+
+padding:0 20px;
+
+}
+
+
+
+.about-page h1{
+
+font-size:40px;
+
+}
+
+
+
+.contact-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+}.social-icons{
+
+display:flex;
+
+gap:35px;
+
+margin-top:40px;
+
+}
+
+
+
+.social-icons a{
+
+width:45px;
+
+height:45px;
+
+border:1px solid #ddd;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:18px;
+
+color:#1E2B22;
+
+text-decoration:none;
+
+transition:.3s;
+
+}
+
+
+
+.social-icons a:hover{
+
+transform:translateY(-5px);
+
+border-color:#1E2B22;
+
+}.social-icons{
+
+display:flex;
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+
+.social-icons a{
+
+width:48px;
+
+height:48px;
+
+border:1px solid #ddd;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+transition:.3s;
+
+}
+
+
+
+.social-icons a:hover{
+
+transform:translateY(-5px);
+
+border-color:#222;
+
+}
+
+
+
+/* 邮箱 */
+
+.icon.email::before{
+
+content:"✉";
+
+font-size:18px;
+
+}
+
+
+
+/* Instagram */
+
+.icon.instagram::before{
+
+content:"◎";
+
+font-size:24px;
+
+}
+
+
+
+/* 小红书 */
+
+.icon.xhs::before{
+
+content:"小";
+
+font-size:16px;
+
+letter-spacing:1px;
+
+}.home-page{
+
+max-width:1200px;
+
+margin:auto;
+
+padding:0 40px;
+
+}
+
+
+
+.hero{
+
+min-height:85vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+}
+
+
+
+.archive-number{
+
+font-size:12px;
+
+letter-spacing:5px;
+
+color:#888;
+
+}
+
+
+
+
+.hero h1{
+
+font-size:90px;
+
+line-height:.9;
+
+letter-spacing:12px;
+
+margin:50px 0;
+
+}
+
+
+
+
+.creator{
+
+font-size:16px;
+
+letter-spacing:5px;
+
+line-height:2;
+
+}
+
+
+
+.field{
+
+margin-top:40px;
+
+letter-spacing:4px;
+
+font-size:13px;
+
+}
+
+
+
+
+.enter{
+
+display:inline-block;
+
+margin-top:70px;
+
+border-bottom:1px solid #222;
+
+padding-bottom:10px;
+
+color:#222;
+
+text-decoration:none;
+
+letter-spacing:4px;
+
+}
+
+
+
+
+
+.index-section{
+
+padding:120px 0;
+
+border-top:1px solid #ddd;
+
+}
+
+
+
+.index-section h2{
+
+letter-spacing:6px;
+
+font-size:16px;
+
+}
+
+
+
+
+.index-list{
+
+display:flex;
+
+flex-direction:column;
+
+margin-top:50px;
+
+}
+
+
+
+.index-list a{
+
+padding:30px 0;
+
+border-bottom:1px solid #ddd;
+
+font-size:24px;
+
+letter-spacing:5px;
+
+color:#111;
+
+text-decoration:none;
+
+}
+
+
+
+.index-list span{
+
+font-size:12px;
+
+color:#888;
+
+margin-right:40px;
+
+}
+
+
+
+
+footer{
+
+padding:60px 40px;
+
+letter-spacing:3px;
+
+font-size:12px;
+
+}
+
+
+
+
+@media(max-width:768px){
+
+
+.hero h1{
+
+font-size:55px;
+
+}
+
+
+.home-page{
+
+padding:0 20px;
+
+}
+
+
+}.profile-box{
+
+margin-top:100px;
+
+padding-top:60px;
+
+border-top:1px solid #ddd;
+
+}
+
+
+
+.profile-box h2{
+
+font-size:16px;
+
+letter-spacing:5px;
+
+margin-bottom:50px;
+
+}
+
+
+
+.profile-item{
+
+margin-bottom:45px;
+
+}
+
+
+
+.profile-item .label{
+
+font-size:11px;
+
+letter-spacing:4px;
+
+color:#888;
+
+margin-bottom:15px;
+
+}
+
+
+
+.profile-item p{
+
+line-height:2;
+
+letter-spacing:2px;
+
+}.photo-book{
+
+display:flex;
+
+flex-direction:column;
+
+gap:100px;
+
+margin-top:100px;
+
+}
+
+
+
+.photo-book figure{
+
+margin:0;
+
+}
+
+
+
+.photo-book img{
+
+width:100%;
+
+display:block;
+
+}
+
+
+
+.photo-book figcaption{
+
+margin-top:20px;
+
+font-size:12px;
+
+letter-spacing:4px;
+
+color:#777;
+
+}/* =========================
+   PHOTO ARCHIVE STYLE
+========================= */
+
+
+.photo-page{
+
+max-width:1100px;
+
+margin:auto;
+
+padding:80px 40px;
+
+}
+
+
+
+/* 项目编号 */
+
+.project-number{
+
+font-size:12px;
+
+letter-spacing:5px;
+
+color:#888;
+
+margin-bottom:40px;
+
+}
+
+
+
+/* 标题 */
+
+.photo-page h1{
+
+font-size:60px;
+
+font-weight:400;
+
+letter-spacing:10px;
+
+margin-bottom:60px;
+
+}
+
+
+
+/* 项目信息 */
+
+.project-info{
+
+display:flex;
+
+gap:100px;
+
+padding-bottom:60px;
+
+border-bottom:1px solid #ddd;
+
+font-size:12px;
+
+letter-spacing:3px;
+
+line-height:2;
+
+}
+
+
+
+
+
+/* 描述 */
+
+.description{
+
+max-width:600px;
+
+margin:80px 0;
+
+line-height:2.2;
+
+font-size:15px;
+
+letter-spacing:2px;
+
+}
+
+
+
+
+
+/* 图片区域 */
+
+.photo-book{
+
+display:flex;
+
+flex-direction:column;
+
+gap:100px;
+
+}
+
+
+
+
+
+.photo-book figure{
+
+margin:0;
+
+}
+
+
+
+
+
+.photo-book img{
+
+width:100%;
+
+display:block;
+
+cursor:pointer;
+
+transition:.6s ease;
+
+}
+
+
+
+
+
+.photo-book img:hover{
+
+opacity:.85;
+
+transform:scale(1.01);
+
+}
+
+
+
+
+
+.photo-book figcaption{
+
+margin-top:20px;
+
+font-size:11px;
+
+letter-spacing:5px;
+
+color:#777;
+
+}
+
+
+
+
+
+/* 图片放大 */
+
+.lightbox{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:rgba(0,0,0,.92);
+
+display:none;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:9999;
+
+}
+
+
+
+
+
+.lightbox.active{
+
+display:flex;
+
+}
+
+
+
+
+
+.lightbox img{
+
+max-width:90%;
+
+max-height:90%;
+
+object-fit:contain;
+
+}
+
+
+
+
+
+.close-lightbox{
+
+position:absolute;
+
+top:40px;
+
+right:50px;
+
+color:white;
+
+font-size:40px;
+
+font-weight:200;
+
+cursor:pointer;
+
+}
+
+
+
+
+
+/* 项目信息 */
+
+.camera-info{
+
+margin-top:120px;
+
+padding-top:50px;
+
+border-top:1px solid #ddd;
+
+font-size:13px;
+
+line-height:2;
+
+letter-spacing:2px;
+
+}
+
+
+
+
+
+.camera-info h3{
+
+font-size:14px;
+
+letter-spacing:5px;
+
+margin-bottom:40px;
+
+}
+
+
+
+
+
+/* 档案文字 */
+
+.archive-note{
+
+margin-top:100px;
+
+padding-top:50px;
+
+border-top:1px solid #ddd;
+
+max-width:650px;
+
+line-height:2.2;
+
+letter-spacing:2px;
+
+}
+
+
+
+
+
+/* 手机适配 */
+
+@media(max-width:768px){
+
+
+.photo-page{
+
+padding:50px 20px;
+
+}
+
+
+
+.photo-page h1{
+
+font-size:38px;
+
+letter-spacing:6px;
+
+}
+
+
+
+.project-info{
+
+gap:30px;
+
+flex-wrap:wrap;
+
+}
+
+
+}/* =====================
+ SOUND PAGE
+===================== */
+
+
+.sound-page{
+
+max-width:1100px;
+
+margin:auto;
+
+padding:80px 40px;
+
+}
+
+
+
+
+.sound-page h1{
+
+font-size:60px;
+
+font-weight:400;
+
+letter-spacing:10px;
+
+margin:50px 0;
+
+}
+
+
+
+
+.sound-intro{
+
+max-width:600px;
+
+line-height:2.2;
+
+margin-bottom:100px;
+
+}
+
+
+
+
+.music-section{
+
+margin-bottom:100px;
+
+padding-top:50px;
+
+border-top:1px solid #ddd;
+
+}
+
+
+
+
+.music-section h2{
+
+font-size:14px;
+
+letter-spacing:5px;
+
+margin-bottom:50px;
+
+}
+
+
+
+
+.music-list{
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+
+
+
+.music-item{
+
+padding:25px 0;
+
+border-bottom:1px solid #ddd;
+
+font-size:24px;
+
+letter-spacing:5px;
+
+}
+
+
+
+
+.music-item span{
+
+font-size:12px;
+
+color:#888;
+
+margin-right:40px;
+
+}
+
+
+
+
+.tags{
+
+display:flex;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+
+
+
+.tags span{
+
+border:1px solid #ccc;
+
+padding:12px 25px;
+
+font-size:12px;
+
+letter-spacing:3px;
+
+}
+
+
+
+
+@media(max-width:768px){
+
+
+.sound-page{
+
+padding:50px 20px;
+
+}
+
+
+
+.sound-page h1{
+
+font-size:38px;
+
+}
+
+
+}

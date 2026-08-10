@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="NEO ARCHIVE photography portfolio">
+
+<title>PHOTO - NEO ARCHIVE</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+
+<body>
+
+
+
+<header class="site-header">
+
+
+<div class="logo">
+
+<a href="index.html">
+
+NEO ARCHIVE
+
+</a>
+
+</div>
+
+
+
+
+
+<nav>
+
+
+<a href="index.html">
+HOME
+</a>
+
+
+<a href="photo.html">
+PHOTO
+</a>
+
+
+<a href="film.html">
+FILM
+</a>
+
+
+<a href="sound.html">
+SOUND
+</a>
+
+
+<a href="writing.html">
+WRITING
+</a>
+
+
+<a href="about.html">
+ABOUT
+</a>
+
+
+
+
+
+<button onclick="changeLanguage('zh')">
+
+中文
+
+</button>
+
+
+
+<button onclick="changeLanguage('en')">
+
+EN
+
+</button>
+
+
+
+</nav>
+
+
+</header>
+
+
+
+
+
+
+
+
+
+<section class="photo-page">
+
+
+
+
+
+<p class="project-number">
+
+PROJECT NO.001
+
+</p>
+
+
+
+
+
+<h1>
+
+CITY MEMORY
+
+</h1>
+
+
+
+
+
+
+
+<div class="project-info">
+
+
+<div>
+
+DATE
+
+<br>
+
+2026
+
+</div>
+
+
+
+
+<div>
+
+LOCATION
+
+<br>
+
+CHINA
+
+</div>
+
+
+
+
+<div>
+
+CAMERA
+
+<br>
+
+SONY A7
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="description">
+
+
+
+<p data-zh>
+
+城市像一本不断翻页的书。
+
+</p>
+
+
+
+<p data-en style="display:none;">
+
+The city is like a book that keeps turning its pages.
+
+</p>
+
+
+
+
+
+<p data-zh>
+
+我记录街道、建筑以及人与空间之间短暂的关系。
+
+</p>
+
+
+
+<p data-en style="display:none;">
+
+I record the brief relationship between streets, architecture and human presence.
+
+</p>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- PHOTO GALLERY -->
+
+
+<div class="photo-book">
+
+
+
+
+
+<figure>
+
+
+<img src="images/city.jpg"
+
+class="gallery-img"
+
+alt="city photography">
+
+
+<figcaption>
+
+CITY MEMORY 01
+
+</figcaption>
+
+
+</figure>
+
+
+
+
+
+
+
+
+<figure>
+
+
+<img src="images/people.jpg"
+
+class="gallery-img"
+
+alt="people photography">
+
+
+<figcaption>
+
+CITY MEMORY 02
+
+</figcaption>
+
+
+</figure>
+
+
+
+
+
+
+
+
+<figure>
+
+
+<img src="images/travel.jpg"
+
+class="gallery-img"
+
+alt="travel photography">
+
+
+<figcaption>
+
+CITY MEMORY 03
+
+</figcaption>
+
+
+</figure>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- LIGHTBOX -->
+
+
+<div class="lightbox">
+
+
+<span class="close-lightbox">
+
+×
+
+</span>
+
+
+
+<img src="" alt="preview">
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="camera-info">
+
+
+<h3>
+
+PROJECT INFO
+
+</h3>
+
+
+
+
+
+<p>
+
+Camera:
+
+<br>
+
+Sony A7 Series
+
+</p>
+
+
+
+
+
+
+<p>
+
+Lens:
+
+<br>
+
+35mm
+
+</p>
+
+
+
+
+
+
+<p>
+
+Style:
+
+<br>
+
+Documentary Photography
+
+</p>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="archive-note">
+
+
+<h3>
+
+ARCHIVE NOTE
+
+</h3>
+
+
+<br>
+
+
+
+<span data-zh>
+
+城市像一本不断翻页的书。
+
+<br><br>
+
+我记录街道、建筑以及人与空间之间短暂的关系。
+
+</span>
+
+
+
+
+
+<span data-en style="display:none;">
+
+The city is a book that keeps turning pages.
+
+<br><br>
+
+I document the relationship between people, space and urban memory.
+
+</span>
+
+
+
+
+</div>
+
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<footer>
+
+© 2026 NEO ARCHIVE
+
+</footer>
+
+
+
+
+
+
+
+
+
+<script src="script.js"></script>
+
+
+
+
+
+<script>
+
+
+const images = document.querySelectorAll(".gallery-img");
+
+
+const lightbox = document.querySelector(".lightbox");
+
+
+const lightboxImg = document.querySelector(".lightbox img");
+
+
+const closeBtn = document.querySelector(".close-lightbox");
+
+
+
+
+images.forEach(img=>{
+
+
+img.onclick=function(){
+
+
+lightboxImg.src=this.src;
+
+
+lightbox.classList.add("active");
+
+
+}
+
+
+});
+
+
+
+
+
+closeBtn.onclick=function(e){
+
+
+e.stopPropagation();
+
+
+lightbox.classList.remove("active");
+
+
+}
+
+
+
+
+
+lightbox.onclick=function(){
+
+
+lightbox.classList.remove("active");
+
+
+}
+
+
+
+</script>
+
+
+
+
+
+</body>
+
+</html>
